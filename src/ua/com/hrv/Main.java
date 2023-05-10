@@ -7,14 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Integer> arrayList1 = new ArrayList<Integer>();
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
-        arrayList1.add(randomNumber(1, 500));
+        for (int i = 0; i < randomNumber(1,15); i++) {
+            arrayList1.add(randomNumber(1, 500));
+        }
         System.out.println(arrayList1);
 
         Scanner scanner = new Scanner(System.in);
@@ -24,29 +19,28 @@ public class Main {
 
                 case 1: {
                     ArrayList<Car> arrayList = new ArrayList<>();
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    System.out.println(arrayList);
+                    for (int i = 0; i < randomNumber(1,22); i++){
+                        arrayList.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
+                    }
+                    for (Car car : arrayList) {
+                        System.out.println(car);
+                    }
                     break;
                 }
                 case 2: {
                     ArrayList<Car> arrayList2 = new ArrayList<>();
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
-                    arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
+                    for (int i = 0; i < randomNumber(1,20); i++){
+                        arrayList2.add(new Car(randomHP(90, 550), randomYear(2000, 2023), new Helm(randomHelm(14, 17), "алькантара"), new Engine(randomEng(3, 12))));
+                    }
+                    System.out.println("Рандомні значення ");
+                    for (Car car : arrayList2) {
+                        System.out.println(car);
+                    }
                     ArrayList<Car> awq = new ArrayList<>(Collections.nCopies(arrayList2.size(),new Car(110, 2014, new Helm(15, "алькантара"), new Engine(4))));
-                    System.out.println(awq);
+                    System.out.println("Замінені усі значення");
+                    for (Car car : awq){
+                        System.out.println(car);
+                    }
                     break;
                 }
             }

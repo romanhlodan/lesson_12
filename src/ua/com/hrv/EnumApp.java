@@ -195,7 +195,7 @@ public class EnumApp {
 
                     boolean flag = false;
                     for (int i = 0; i < sea.size(); i++) {
-                        if (sea.get(i).name().equals(season)){
+                        if (sea.get(i).name().equals(season)) {
                             flag = true;
                         }
 
@@ -257,7 +257,6 @@ public class EnumApp {
 
         }
     }
-
 
 
     public static void menu() {
